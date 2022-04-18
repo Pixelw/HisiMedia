@@ -1,6 +1,6 @@
 package com.hisilicon.android.videoplayer.menu;
 
-import android.annotation.IdRes;
+import android.support.annotation.IdRes;
 
 /**
  * Created on 2018/6/29.

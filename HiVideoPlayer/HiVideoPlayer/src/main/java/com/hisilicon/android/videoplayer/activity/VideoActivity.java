@@ -1,6 +1,5 @@
 package com.hisilicon.android.videoplayer.activity;
 
-import android.annotation.IdRes;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
@@ -28,6 +27,7 @@ import android.os.Message;
 import android.os.Parcel;
 import android.os.PowerManager;
 import android.provider.Settings;
+import android.support.annotation.IdRes;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.ContextThemeWrapper;

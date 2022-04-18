@@ -3,15 +3,14 @@ package com.hisilicon.android.videoplayer.view;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.PixelFormat;
-import android.media.MediaFormat;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
 import android.media.MediaPlayer.OnInfoListener;
 import android.media.MediaPlayer.OnSeekCompleteListener;
+import android.media.PlaybackParams;
 import android.media.TimedText;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
@@ -35,15 +34,15 @@ import com.hisilicon.android.videoplayer.utils.HiMediaPlayerDefine;
 import com.hisilicon.android.videoplayer.utils.HiMediaPlayerInvoke;
 import com.hisilicon.android.videoplayer.utils.LogTool;
 import com.hisilicon.android.videoplayer.utils.PlayerJugdment;
-import com.hisilicon.android.videoplayer.utils.SystemProperties;
 import com.hisilicon.android.videoplayer.utils.SSlUtils;
+import com.hisilicon.android.videoplayer.utils.SystemProperties;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-import android.media.PlaybackParams;
+
 import javax.net.ssl.HttpsURLConnection;
 
 public class HisiVideoView extends SurfaceView implements MediaPlayerControl {
@@ -675,8 +674,8 @@ public class HisiVideoView extends SurfaceView implements MediaPlayerControl {
             /*Add catch because DPT don't support setVideoCvrs function*/
             /*and SDK don't support setNewFounction*/
             try {
-//                mediaInvoke(request, reply);
-                mMediaPlayer.invoke(request, reply);
+                mediaInvoke(request, reply);
+//                mMediaPlayer.invoke(request, reply);
             } catch (Exception e) {
                 LogTool.e(TAG, "--->MediaPlayer.invoke ------" + e.toString());
             }
